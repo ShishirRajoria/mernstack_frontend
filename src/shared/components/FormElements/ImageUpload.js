@@ -5,7 +5,6 @@ import Button from "./Button";
 import "./ImageUpload.css";
 
 const ImageUpload = (props) => {
-  console.log(props);
   const [file, setFile] = useState();
   const [previewUrl, setPreviewUrl] = useState();
   const [isValid, setIsValid] = useState(false);
