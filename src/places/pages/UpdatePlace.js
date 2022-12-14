@@ -8,7 +8,7 @@ import {
   VALIDATOR_REQUIRE,
 } from "../../shared/components/util/validators";
 import Card from "../../shared/components/UIElements/Card";
-import "./PlaceForm.css";
+import styled from "./PlaceForm.module.css";
 import ErrorModal from "../../shared/components/UIElements/ErrorModal";
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner";
 import useHttpClient from "../../shared/components/hooks/http-hook";
@@ -108,7 +108,7 @@ const UpdatePlace = () => {
     <>
       <ErrorModal error={error} onClear={clearError} />
       {!isLoading && loadedPlace && (
-        <form className="place-form" onSubmit={UpdateFormSubmitHandler}>
+        <form className={styled.placeform} onSubmit={UpdateFormSubmitHandler}>
           <Input
             id="title"
             element="input"
