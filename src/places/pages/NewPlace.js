@@ -13,7 +13,7 @@ import {
 } from "../../shared/components/util/validators";
 import useForm from "../../shared/components/hooks/form-hook";
 import useHttpClient from "../../shared/components/hooks/http-hook";
-import "./PlaceForm.css";
+import styled from "./PlaceForm.module.css";
 import { AuthContext } from "../../shared/components/context/auth-context";
 
 const NewPlace = () => {
@@ -78,7 +78,7 @@ const NewPlace = () => {
   return (
     <>
       <ErrorModal error={error} onClear={clearError} />
-      <form className="place-form" onSubmit={placeSubmitHandler}>
+      <form className={styled.placeform} onSubmit={placeSubmitHandler}>
         {isLoading && <LoadingSpinner asOverlay />}
         <Input
           id="title"
