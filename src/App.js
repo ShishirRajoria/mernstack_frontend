@@ -33,10 +33,10 @@ const App = () => {
   const login = useCallback((uid, token, expirationDate) => {
     setToken(token);
     setUserId(uid);
-/* **************************** */
-     //new Date();
-     //...-> returns date in format like 31st may 2020;rem. it also takes arg. if needed
-/* **************************** */
+    /* **************************** */
+    //new Date();
+    //...-> returns date in format like 31st may 2020;rem. it also takes arg. if needed
+    /* **************************** */
     const tokenExpirationDate =
       expirationDate || new Date(new Date().getTime() + 1000 * 60 * 60);
     setTokenExpirationDate1(tokenExpirationDate);
@@ -64,7 +64,7 @@ const App = () => {
     if (token && tokenExpirationDate1) {
       const remainingTime =
         tokenExpirationDate1.getTime() - new Date().getTime();
-        // console.log(remainingTime);
+      // console.log(remainingTime);
       logoutTimer = setTimeout(logout, remainingTime);
       clearTimeout(logoutTimer);
       //cleartimeout function will clear timer automatically on refresh when remaining time get zero
@@ -134,7 +134,7 @@ const App = () => {
     >
       <Router>
         <MainNavigation />
-       {/* <SignIn/> */}
+        {/* <SignIn/> */}
         <main>
           <Suspense
             fallback={
